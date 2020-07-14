@@ -1,0 +1,6 @@
+name: XCore
+main: net.savagelabs.XCore
+version: 1.0.0
+api-version: '1.13'
+description: 'A plugin with kotlin runtime, reflect, and other utils bundled'
+author: ProSavage

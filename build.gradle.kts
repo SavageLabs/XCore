@@ -12,6 +12,8 @@ repositories {
     mavenCentral()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
     maven("https://nexus.savagelabs.net/repository/maven-releases/")
+    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
+    maven("https://jitpack.io")
 }
 
 dependencies {
@@ -25,6 +27,8 @@ dependencies {
     implementation("me.rayzr522:jsonmessage:1.2.0")
     implementation("com.github.MinusKube:SmartInvs:master-SNAPSHOT")
     implementation("com.deanveloper:skullcreator:2.0.0")
+
+    compileOnly("org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT")
 }
 
 tasks {
