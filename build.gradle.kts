@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "net.savagelabs"
-version = "v1.0.0"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -27,6 +27,8 @@ dependencies {
     implementation("me.rayzr522:jsonmessage:1.2.0")
     implementation("com.github.MinusKube:SmartInvs:master-SNAPSHOT")
     implementation("com.deanveloper:skullcreator:2.0.0")
+    implementation("org.litote.kmongo:kmongo-coroutine:4.0.2")
+    implementation(project(":SavagePluginX"))
 
     compileOnly("org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT")
 }
