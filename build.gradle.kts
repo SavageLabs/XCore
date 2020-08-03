@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "net.savagelabs"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -28,6 +28,7 @@ dependencies {
     implementation("com.github.MinusKube:SmartInvs:master-SNAPSHOT")
     implementation("com.deanveloper:skullcreator:2.0.0")
     implementation("org.litote.kmongo:kmongo-coroutine:4.0.2")
+    implementation("org.yaml:snakeyaml:1.26")
     implementation(project(":SavagePluginX"))
 
     compileOnly("org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT")
@@ -43,8 +44,8 @@ tasks {
         dependsOn(shadowJar)
     }
 
-
     val shadowJar = named<ShadowJar>("shadowJar") {
+        relocate("org.yaml", "net.savagelabs.shade.snake-yaml")
         exclude("META-INF/*.DSA")
         exclude("META-INF/*.RSA")
         archiveBaseName.set("XCore")
